@@ -16,3 +16,8 @@ function setValueById(id, value) {
     const elementField = document.getElementById(id);
     elementField.innerText = value;
 }
+
+function clearInputField(id){
+    const element = document.getElementById(id);
+    element.value = '';
+}
