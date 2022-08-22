@@ -21,3 +21,9 @@ function clearInputField(id){
     const element = document.getElementById(id);
     element.value = '';
 }
+
+function toTwoDecimalPoints(value){
+    const valueString = value.toFixed(2);
+    const convertedValue = parseFloat(valueString);
+    return convertedValue;
+}

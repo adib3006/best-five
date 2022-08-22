@@ -32,7 +32,8 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
     else {
         const totalPlayersField = document.querySelectorAll('li');
         const totalPlayers = totalPlayersField.length;
-        const totalCostOfPlayers = perPlayerCost * totalPlayers;
+        const costOfPlayers = perPlayerCost * totalPlayers;
+        const totalCostOfPlayers = toTwoDecimalPoints(costOfPlayers);
         setValueById('player-expenses', totalCostOfPlayers);
     }
 });
@@ -51,6 +52,7 @@ document.getElementById('btn-calculate-total').addEventListener('click', functio
         clearInputField('coach-cost');
         return;
     }
-    const totalCost = playerExpenses + managerCost + coachCost;
+    const total = playerExpenses + managerCost + coachCost;
+    const totalCost = toTwoDecimalPoints(total);
     setValueById('total', totalCost);
 });
